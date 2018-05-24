@@ -9,7 +9,7 @@ class ImageUploader {
                 multipartFormData.append(UIImagePNGRepresentation(image)!, withName: "image", fileName: "temp.png", mimeType: "image/png")
                 multipartFormData.append(label.data(using: String.Encoding.utf8)!, withName: "label")
             },
-            to: "http://172.16.8.8:3000/post_image.json",
+            to: "http://192.168.0.15:3000/post_image.json",
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
