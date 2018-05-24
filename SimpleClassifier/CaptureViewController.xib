@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptureViewController" customModule="SimpleClassifier" customModuleProvider="target">
+            <connections>
+                <outlet property="frameView" destination="LOu-zB-Mgn" id="kIR-qs-ibl"/>
+                <outlet property="imageView" destination="YW6-Q5-nko" id="HYu-Kc-tHG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-V2-3oR">
+                    <rect key="frame" x="20" y="30" width="120" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="CVd-Bt-7Ll"/>
+                        <constraint firstAttribute="width" constant="120" id="fsC-lL-2VA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Reset"/>
+                    <connections>
+                        <action selector="onResetTapped:" destination="-1" eventType="touchUpInside" id="3Pg-7L-j98"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOu-zB-Mgn">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                    <subviews>
+                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-Q5-nko">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="qPR-XT-UGl"/>
+                        <constraint firstAttribute="width" secondItem="LOu-zB-Mgn" secondAttribute="height" multiplier="1:1" id="zCx-R6-ohq"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-uM-e0g" userLabel="Camera Button">
+                    <rect key="frame" x="20" y="612" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="X8A-ql-2xD"/>
+                        <constraint firstAttribute="width" constant="30" id="eZI-wZ-yvi"/>
+                    </constraints>
+                    <state key="normal" image="Camera"/>
+                    <connections>
+                        <action selector="onCameraTouched:" destination="-1" eventType="touchUpInside" id="s9B-fA-kPY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-fY-pl4">
+                    <rect key="frame" x="255" y="547" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Otu-9M-a4Z"/>
+                        <constraint firstAttribute="height" constant="40" id="pm1-5o-3q3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Upload"/>
+                    <connections>
+                        <action selector="onUploadTouched:" destination="-1" eventType="touchUpInside" id="sFu-tF-QDM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyv-Jo-lrj">
+                    <rect key="frame" x="255" y="607" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ieN-89-fsy"/>
+                        <constraint firstAttribute="width" constant="100" id="mz5-Qs-no2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Check"/>
+                    <connections>
+                        <action selector="onCheckTouched:" destination="-1" eventType="touchUpInside" id="9jJ-V7-j3K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-X1-dBR">
+                    <rect key="frame" x="70" y="607" width="120" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="3If-cU-B3q"/>
+                        <constraint firstAttribute="height" constant="40" id="XdC-a3-aEM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Library"/>
+                    <connections>
+                        <action selector="onPickupTouched:" destination="-1" eventType="touchUpInside" id="IvL-HB-v8L"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-JC-oZY">
+                    <rect key="frame" x="20" y="537" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="TaR-zb-5YO"/>
+                        <constraint firstAttribute="height" constant="50" id="o5K-gK-Wbd"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rqu-8U-sIv"/>
+                        <outlet property="delegate" destination="-1" id="BqH-uY-fuZ"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nai-JC-oZY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5zy-QL-ase"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BP5-uM-e0g" secondAttribute="bottom" constant="25" id="9cT-8W-cj8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yyv-Jo-lrj" secondAttribute="trailing" constant="20" id="Drm-Kn-Zd1"/>
+                <constraint firstItem="yyv-Jo-lrj" firstAttribute="top" secondItem="yVh-fY-pl4" secondAttribute="bottom" constant="20" id="GD9-nT-THO"/>
+                <constraint firstItem="e1r-V2-3oR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Ipt-Qc-9O9"/>
+                <constraint firstItem="gZ5-X1-dBR" firstAttribute="leading" secondItem="BP5-uM-e0g" secondAttribute="trailing" constant="20" id="MQV-G6-vt5"/>
+                <constraint firstItem="LOu-zB-Mgn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OuQ-dt-wN0"/>
+                <constraint firstItem="BP5-uM-e0g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Owt-Ml-Z9P"/>
+                <constraint firstItem="LOu-zB-Mgn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aTf-E8-7ST"/>
+                <constraint firstItem="gZ5-X1-dBR" firstAttribute="top" secondItem="Nai-JC-oZY" secondAttribute="bottom" constant="20" id="bPI-HW-Vcb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gZ5-X1-dBR" secondAttribute="bottom" constant="20" id="kbs-5H-5Hm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yyv-Jo-lrj" secondAttribute="bottom" constant="20" id="oDq-0n-CF8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yVh-fY-pl4" secondAttribute="trailing" constant="20" id="vsD-ve-9Lf"/>
+                <constraint firstItem="e1r-V2-3oR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zWu-ob-Iyf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera" width="60" height="60"/>
+    </resources>
+</document>
